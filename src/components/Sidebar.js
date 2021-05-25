@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import EditIcon from '@material-ui/icons/Edit';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import InsertCommentIcon from '@material-ui/icons/InsertComment'
-import { BookmarkBorder, ExpandLess } from '@material-ui/icons';
+import { BookmarkBorder, ExpandLess, ExpandMore} from '@material-ui/icons';
 import SidebarOptions from './SidebarOptions';
 import InboxIcon from '@material-ui/icons/Inbox';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import AddIcon from "@material-ui/icons/Add"
 
 function Sidebar() {
     return (
@@ -36,6 +37,10 @@ function Sidebar() {
             <SidebarOptions Icon={PeopleAltIcon} title="People"/>
             <SidebarOptions Icon={FileCopyIcon} title="File browser"/>
             <SidebarOptions Icon={ExpandLess} title="Show less"/>
+            
+            <hr/>
+            <SidebarOptions Icon={ExpandMore} title= "Channels" />
+            <SidebarOptions Icon={AddIcon} addChannelOption title= "Add Channel" />
 
                      
         </SidebarContainer>
@@ -50,6 +55,12 @@ color: white;
 flex: 0.3;
 max-width: 260px;
 margin-top: 60px;
+
+> hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+}
 
 `;
 
