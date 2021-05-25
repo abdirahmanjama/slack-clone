@@ -2,6 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import EditIcon from '@material-ui/icons/Edit';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
+import InsertCommentIcon from '@material-ui/icons/InsertComment'
+import { BookmarkBorder, ExpandLess } from '@material-ui/icons';
+import SidebarOptions from './SidebarOptions';
+import InboxIcon from '@material-ui/icons/Inbox';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import DraftsIcon from '@material-ui/icons/Drafts';
 
 function Sidebar() {
     return (
@@ -21,6 +28,15 @@ function Sidebar() {
                 </SidebarRight>
              
             </SidebarHeader>
+
+            <SidebarOptions Icon={InsertCommentIcon} title="Threads"/>
+            <SidebarOptions Icon={InboxIcon} title="Mentions & Replies"/>
+            <SidebarOptions Icon={DraftsIcon} title="Saved items"/>
+            <SidebarOptions Icon={BookmarkBorder} title="Change"/>
+            <SidebarOptions Icon={PeopleAltIcon} title="People"/>
+            <SidebarOptions Icon={FileCopyIcon} title="File browser"/>
+            <SidebarOptions Icon={ExpandLess} title="Show less"/>
+
                      
         </SidebarContainer>
     )
